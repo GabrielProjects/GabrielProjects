@@ -37,7 +37,3 @@
 ###
 
 <br clear="both">
-
-<img src="https://raw.githubusercontent.com/GabrielProjects/GabrielProjects/output/snake.svg" alt="Snake animation" />
-
-###
