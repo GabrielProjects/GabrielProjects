@@ -1,51 +1,61 @@
-# Gabriele — One‑Page Portfolio (GitHub Pages)
+<h2 align="left">Hi 👋! My name is Gabriele and I'm a Student, from Italy, Palermo</h2>
 
-A single‑page, terminal‑enhanced portfolio for Gabriele D'Asta. Built with plain HTML/CSS/JS, themed with Tokyo Night by default, and designed for GitHub Pages.
+###
 
-## Features
-- Terminal widget with commands: `help`, `about`, `skills`, `projects`, `socials`, `stats`, `contact`, `theme <tokyo|light|matrix|dark>`, `open <section|url>`, `clear`.
-- Animated hero (typewriter) and subtle background particles.
-- Auto‑fetched GitHub projects (latest/top repos) via the public API.
-- Sections: About, Skills, Projects, Stats, Contact.
-- Accessible, responsive layout with theme switching.
+<div align="center">
 
-## Local Preview
-Use any static server. Two quick options from PowerShell:
+  <img src="https://github-readme-stats.vercel.app/api?username=GabrielProjects&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=en&hide_border=false&order=1" height="200" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=GabrielProjects&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=false&order=2" height="200" alt="languages graph"  />
+  <img src="https://raw.githubusercontent.com/GabrielProjects/ocbadge/main/card.svg"/>
+  <img src="https://streak-stats.demolab.com?user=GabrielProjects&locale=en&mode=daily&theme=tokyonight&hide_border=false&border_radius=5&order=3" height="200" alt="streak graph"  />
+  <img src="https://github-profile-trophy.vercel.app?username=GabrielProjects&theme=tokyonight&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=GabrielProjects&radius=16&theme=react&area=true&order=5" height="300" alt="activity-graph graph"  />
+</div>
 
-```powershell
-# Option 1: Python (if installed)
-python -m http.server 5500 ; Start-Process http://localhost:5500
+###
 
-# Option 2: Node (no install, using npx)
-npx serve . -l 5500 ; Start-Process http://localhost:5500
-```
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50" alt="html5 logo"  />
+  <img width="26" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50" alt="css3 logo"  />
+  <img width="26" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="50" alt="python logo"  />
+  <img width="26" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" alt="javascript logo"  />
+  <img width="26" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="50" alt="php logo"  />
+  <img width="26" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="50" alt="mysql logo"  />
+</div>
 
-Or use VS Code's Live Server extension.
+###
 
-## Deploy to GitHub Pages
-You have two simple paths:
+<p align="left"></p>
 
-- User/Org site (recommended if this is your profile site):
-  1. Create a repo named `<your-username>.github.io`.
-  2. Copy the contents of this folder to the repo root.
-  3. Commit and push. Pages will go live at `https://<your-username>.github.io`.
+###
 
-- Project site (if you keep your main profile repo separate):
-  1. Push this folder to a repo (e.g., `gabrieldev-site`).
-  2. In repo Settings → Pages → Build and deployment: Source = `Deploy from a branch`, Branch = `main` (or the branch you used), Folder = `/root`.
-  3. The site will be served at `https://<your-username>.github.io/<repo-name>/`.
+<h3 align="left">You can find out more about me here:</h3>
 
-No build step is required.
+###
 
-## Customize
-- Update the hero text in `assets/js/main.js` (typewriter messages).
-- Add/remove skills in `index.html` → Skills section.
-- Tweak colors in `assets/css/style.css` (CSS variables for each theme).
-- Change GitHub username in `assets/js/main.js` (`state.username`).
+<img align="right" height="180" src="https://i.imgflip.com/8imhj6.gif"  />
 
-## Notes
-- The Projects section fetches public repos via the GitHub API without auth; heavy rate limits may apply to many rapid refreshes.
-- All third‑party stat images come from your existing README services and load client‑side.
+###
 
-## License
-Personal use by Gabriele D'Asta. Feel free to reference structure and ideas for your own personal site.
+<div align="left">
+  <a href="https://www.linkedin.com/in/gabriele-d-asta-587226244/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="48" alt="linkedin logo"  />
+  </a>
+  <a href="Just add me! My profile nickname is gabriele654321" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="48" alt="discord logo"  />
+  </a>
+  <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="48" alt="telegram logo"  />
+  <a href="https://www.instagram.com/gabriele_dasta" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="48" alt="instagram logo"  />
+  </a>
+  <a href="https://www.buymeacoffee.com/gdasta06c"> 
+    <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="gdasta06c" />
+  </a>
+</div>
+
+###
