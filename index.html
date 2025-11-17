@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Gabriele D'Asta — Student and developer from Palermo, Italy." />
+    <meta name="theme-color" content="#1a1b26" />
+    <title>Gabriele D'Asta — Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Go to top">Gabriele<span class="accent">.dev</span></a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#stats">Stats</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <span id="live-clock" class="clock" aria-live="off"></span>
+          <button id="theme-toggle" class="btn-ghost" title="Toggle theme" aria-label="Toggle theme">🌓</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Hi, I'm <span class="accent">Gabriele</span> 👋</h1>
+            <p class="subtitle">
+              <span id="typed"></span>
+              <span class="cursor" aria-hidden="true">▌</span>
+            </p>
+            <div class="cta">
+              <a class="btn-primary" href="#contact">Get in touch</a>
+              <a class="btn-secondary" href="https://www.buymeacoffee.com/gdasta06c" target="_blank" rel="noreferrer noopener">Buy me a coffee ☕</a>
+            </div>
+          </div>
+
+          <div class="hero-terminal" aria-label="Interactive terminal">
+            <div class="term-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="term-title">gabriel@portfolio: ~</span>
+            </div>
+            <div id="terminal" class="terminal" role="region" aria-live="polite">
+              <div id="term-output" class="term-output" aria-label="Terminal output"></div>
+              <div class="term-input-row">
+                <span class="prompt">gabriel@portfolio:~$</span>
+                <input id="term-input" class="term-input" type="text" spellcheck="false" autocomplete="off" aria-label="Terminal input" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container two-col">
+          <div>
+            <h2>About</h2>
+            <p>
+              I'm Gabriele, a student and a cybersecurity enthusiast from Palermo, Italy.
+              I enjoy building small tools, and training for the CTFtime events. 
+            </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill"><img alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><span>HTML5</span></div>
+            <div class="skill"><img alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><span>CSS3</span></div>
+            <div class="skill"><img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><span>JavaScript</span></div>
+            <div class="skill"><img alt="PHP" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" /><span>PHP</span></div>
+            <div class="skill"><img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /><span>MySQL</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <p class="muted">Auto-fetched from my GitHub public repositories.</p>
+          <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section id="stats" class="section">
+        <div class="container">
+          <h2>Stats</h2>
+          <div class="stats-grid">
+            <img src="https://github-readme-stats.vercel.app/api?username=GabrielProjects&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=en&hide_border=false&order=1" alt="GitHub stats" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=GabrielProjects&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=false&order=2" alt="Top languages" />
+            <img src="https://raw.githubusercontent.com/GabrielProjects/ocbadge/main/card.svg" alt="Open-commit badge" />
+            <img src="https://github-profile-trophy.vercel.app?username=GabrielProjects&theme=tokyonight&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" alt="Profile trophies" />
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=GabrielProjects&radius=16&theme=react&area=true&order=5" alt="Activity graph" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div>
+            <h2>Contact</h2>
+            <p>I'm always open to chat, collaborate, or brainstorm ideas.</p>
+            <div class="socials">
+              <a class="chip" href="https://www.linkedin.com/in/gabriele-d-asta-587226244/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+              <a class="chip" href="https://www.instagram.com/gabriele_dasta" target="_blank" rel="noreferrer noopener">Instagram</a>
+              <a class="chip" href="https://t.me/" target="_blank" rel="noreferrer noopener">Telegram</a>
+              <span class="chip" title="Discord username">Discord: gabriele654321</span>
+              <a class="chip" href="https://www.buymeacoffee.com/gdasta06c" target="_blank" rel="noreferrer noopener">Buy me a coffee</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Gabriele D'Asta. Built with HTML/CSS/JS. Deployed on GitHub Pages.</span>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="container" style="padding:1rem 0 2rem;color:#ff9e64;">
+        This site works best with JavaScript enabled.
+      </div>
+    </noscript>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
