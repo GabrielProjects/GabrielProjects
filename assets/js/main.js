@@ -313,6 +313,12 @@
 
   // Flashbang animation for light theme
   function triggerFlashbang(callback) {
+    // Remove any existing flashbang elements first
+    const existingContainer = document.getElementById('flashbang-container');
+    const existingOverlay = document.getElementById('flash-overlay');
+    if (existingContainer) existingContainer.remove();
+    if (existingOverlay) existingOverlay.remove();
+    
     // Create flashbang elements
     const container = document.createElement('div');
     container.id = 'flashbang-container';
@@ -340,10 +346,30 @@
       setTimeout(callback, 400);
     }, 800);
     
-    // Clean up
+    // Clean up - force remove with better cleanup
     setTimeout(() => {
-      container.remove();
-      overlay.remove();
+      if (container && container.parentNode) container.remove();
+      if (overlay && overlay.parentNode) overlay.remove();
+      
+      // Extra safety cleanup
+      const cleanupContainer = document.getElementById('flashbang-container');
+      const cleanupOverlay = document.getElementById('flash-overlay');
+      if (cleanupContainer) cleanupContainer.remove();
+      if (cleanupOverlay) cleanupOverlay.remove();
     }, 3000);
   }
+
+  // Emergency cleanup function for stuck flashbang
+  function forceCleanupFlashbang() {
+    const containers = document.querySelectorAll('#flashbang-container');
+    const overlays = document.querySelectorAll('#flash-overlay');
+    containers.forEach(el => el.remove());
+    overlays.forEach(el => el.remove());
+  }
+  
+  // Run cleanup on page load in case of stuck elements
+  forceCleanupFlashbang();
+  
+  // Also expose cleanup function globally for emergency use
+  window.cleanupFlashbang = forceCleanupFlashbang;
 })();
