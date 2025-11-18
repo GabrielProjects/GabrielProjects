@@ -32,9 +32,19 @@
   const themeKey = 'gabriele_theme';
   const body = document.body;
   const themeBtn = $('#theme-toggle');
-  function applyTheme(name){
-    body.classList.remove('theme-matrix','theme-dark');
+  function applyTheme(name, skipAnimation = false){
+    body.classList.remove('theme-light','theme-matrix','theme-dark');
     switch(name){
+      case 'light': 
+        if (!skipAnimation) {
+          triggerFlashbang(() => {
+            body.classList.add('theme-light');
+            state.theme = name;
+            try{ localStorage.setItem(themeKey, name); }catch{}
+          });
+          return;
+        }
+        body.classList.add('theme-light'); break;
       case 'matrix': body.classList.add('theme-matrix'); break;
       case 'dark': body.classList.add('theme-dark'); break;
     }
@@ -45,7 +55,7 @@
   applyTheme(savedTheme || 'tokyo');
   if (themeBtn){
     themeBtn.addEventListener('click', () => {
-      const order = ['tokyo','dark','matrix'];
+      const order = ['tokyo','dark','light','matrix'];
       const idx = order.indexOf(state.theme);
       const next = order[(idx+1) % order.length];
       applyTheme(next);
@@ -232,7 +242,7 @@
         let t = (arg||'').toLowerCase();
         // common typos/aliases
         if (t === 'tokuo' || t === 'tokio') t = 'tokyo';
-        const valid = ['tokyo','matrix','dark'];
+        const valid = ['tokyo','light','matrix','dark'];
         if (!valid.includes(t)){ printLine(`<span class="warn">Usage:</span> theme &lt;${valid.join('|')}&gt;`); return; }
         applyTheme(t);
         printLine(`Theme set to ${t}.`);
@@ -300,4 +310,40 @@
       printLine('<span class="ok">Welcome!</span> Type <span class="mono">help</span> to see available commands.');
     }, 300);
   })();
+
+  // Flashbang animation for light theme
+  function triggerFlashbang(callback) {
+    // Create flashbang elements
+    const container = document.createElement('div');
+    container.id = 'flashbang-container';
+    container.style.display = 'block';
+    
+    const flashbang = document.createElement('div');
+    flashbang.className = 'flashbang';
+    
+    const overlay = document.createElement('div');
+    overlay.id = 'flash-overlay';
+    
+    container.appendChild(flashbang);
+    document.body.appendChild(container);
+    document.body.appendChild(overlay);
+    
+    // Start throw animation
+    setTimeout(() => {
+      flashbang.classList.add('flashbang-throw');
+    }, 50);
+    
+    // Trigger flash after throw
+    setTimeout(() => {
+      overlay.classList.add('flashbang-explode');
+      // Apply theme during peak flash
+      setTimeout(callback, 400);
+    }, 800);
+    
+    // Clean up
+    setTimeout(() => {
+      container.remove();
+      overlay.remove();
+    }, 3000);
+  }
 })();
