@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Gabriele and I'm a Student, from Italy, Palermo</h2>
+<h2 align="center">Hi 👋! My name is Gabriele and I'm a Student, from Italy, Palermo</h2>
 
 ###
 
